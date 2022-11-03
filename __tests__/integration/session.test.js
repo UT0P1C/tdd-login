@@ -4,7 +4,7 @@ const app = require("../../src/app")
 
 const {User} = require('../../src/app/models');
 
-const truncate = require("../utils/truncate");
+const truncate = require("../utils/truncate.js");
 
 describe("Authentication suit", () => {
 	beforeEach(async () => {
@@ -12,7 +12,7 @@ describe("Authentication suit", () => {
 	});
 	
 	it("should authenticate with valid credentials", async() => {
-		const user = User.create({
+		const user = await User.create({
 			name: "Esq1z0",
 			email: "esq1z0@esq1z0.com",
 			password_hash: "12312313"
@@ -25,6 +25,6 @@ describe("Authentication suit", () => {
 									password: '123456'
 								});
 		
-		expect(response.status).toBe(200);
+		expect(response.statusCode).toBe(200);
 	});
 });
