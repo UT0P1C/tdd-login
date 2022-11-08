@@ -17,8 +17,6 @@ describe('User suit', () => {
 			password: "123456"
 		})
 
-		const hash = await bcrypt.hash("123456", 8);
-
 		const compareHash = await bcrypt.compare("123456", user.password_hash);
 
 		expect(compareHash).toBe(true);
