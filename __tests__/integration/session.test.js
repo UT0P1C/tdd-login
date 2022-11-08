@@ -7,6 +7,7 @@ const {User} = require('../../src/app/models');
 const truncate = require("../utils/truncate.js");
 
 describe("Authentication suit", () => {
+	
 	beforeEach(async () => {
 		await truncate();
 	});
