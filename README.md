@@ -18,6 +18,9 @@
 ## ⚡️ Endpoints:
 
 	GET /dashboard - home dashboard (apenas para usuários autenticados)
-##
-  POST /sessions - autenticação com nome, email e senha
+  	POST /sessions - autenticação com nome, email e senha
   
+## ✍️ Exemplo de autenticação:
+	name: 'teste',
+	email: 'teste@teste.com',
+	password: '123456'
